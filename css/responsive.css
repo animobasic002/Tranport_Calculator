@@ -1,0 +1,125 @@
+/* ============================================
+   MIDC Transport Calculator — Responsive
+   ============================================ */
+
+/* ── Tablet ── */
+@media (max-width: 1023px) {
+  :root {
+    --max-width: 580px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  :root {
+    --max-width: 100%;
+  }
+
+  .app-container {
+    padding: var(--space-md) var(--space-sm);
+    padding-bottom: calc(var(--space-4xl) + 100px);
+  }
+
+  .calculator-card {
+    padding: var(--space-lg);
+  }
+
+  .amount-value {
+    font-size: var(--font-size-2xl);
+  }
+
+  .calc-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .calc-item-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .calc-item-actions {
+    opacity: 1;
+  }
+
+  .total-bar-inner {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .total-amount {
+    font-size: var(--font-size-xl);
+  }
+
+  .modal-content {
+    max-width: 100%;
+    margin: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .settings-form-row {
+    flex-direction: column;
+  }
+
+  .rate-row {
+    flex-wrap: wrap;
+  }
+
+  .rate-row .rate-weight {
+    min-width: 80px;
+  }
+}
+
+/* ── Small Mobile ── */
+@media (max-width: 479px) {
+  .app-header h1 {
+    font-size: var(--font-size-lg);
+  }
+
+  .calculator-card {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .amount-value {
+    font-size: var(--font-size-xl);
+  }
+
+  .calc-item-details {
+    font-size: var(--font-size-xs);
+  }
+
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .tab {
+    white-space: nowrap;
+    flex: 0 0 auto;
+    min-width: 80px;
+  }
+}
+
+/* ── Print ── */
+@media print {
+  .total-bar,
+  .header-actions,
+  .calc-item-actions,
+  .toast-container {
+    display: none !important;
+  }
+
+  .app-container {
+    padding-bottom: 0;
+  }
+
+  .glass-card,
+  .calc-item {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: none;
+  }
+}
